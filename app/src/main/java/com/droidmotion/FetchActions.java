@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.tactil.lpro.muv_config.data.CommonData;
-import com.tactil.lpro.muv_config.data.Constants;
-import com.tactil.lpro.muv_config.data.res.listView.actions.ActionListAdapter;
+import com.droidmotion.data.CommonData;
+import com.droidmotion.data.Constants;
+import com.droidmotion.data.res.listView.actions.ActionListAdapter;
 
 import java.util.ArrayList;
 

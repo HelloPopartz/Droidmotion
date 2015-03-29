@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.tactil.lpro.muv_config.data.res.view.TimerView
+    <com.droidmotion.data.res.view.TimerView
         android:id="@+id/timer_time_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,17 +21,17 @@
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="25dp"
             android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:layout_gravity="center"
-            android:contentDescription="@string/timer_delete"
-            android:padding="@dimen/timer_setup_delete_padding"
-            android:background="@drawable/ic_backspace_green"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:background="@drawable/ic_backspace_green"
+            android:contentDescription="@string/timer_delete"
+            android:padding="@dimen/timer_setup_delete_padding" />
 
-    </com.tactil.lpro.muv_config.data.res.view.TimerView>
+    </com.droidmotion.data.res.view.TimerView>
 
     <View
         android:id="@+id/divider"

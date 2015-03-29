@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,9 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.tactil.lpro.muv_config.data.CommonData;
-import com.tactil.lpro.muv_config.data.Constants;
-import com.tactil.lpro.muv_config.data.res.view.TimerView;
+import com.droidmotion.data.CommonData;
+import com.droidmotion.data.Constants;
+import com.droidmotion.data.res.view.TimerView;
 
 
 /**
@@ -24,11 +24,10 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
     // Auto call
     static final int PICK_CONTACT = 1;
     static final int PICK_NUMBER = 2;
-
+    protected final Button mNumbers[] = new Button[10];
     //Alarm
     protected int mInputSize = 6;
-    protected final Button mNumbers [] = new Button [10];
-    protected int mInput [] = new int [mInputSize];
+    protected int mInput[] = new int[mInputSize];
     protected int mInputPointer = -1;
     protected TimerView mEnteredTime;
     protected ImageButton mDelete;
@@ -81,7 +80,7 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
                 View v4 = findViewById(R.id.fourth);
                 mEnteredTime = (TimerView) findViewById(R.id.timer_time_text);
 
-                mDelete = (ImageButton)findViewById(R.id.delete);
+                mDelete = (ImageButton) findViewById(R.id.delete);
                 mDelete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -98,23 +97,23 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
 
                 reset();
 
-                mNumbers[1] = (Button)v1.findViewById(R.id.key_left);
-                mNumbers[2] = (Button)v1.findViewById(R.id.key_middle);
-                mNumbers[3] = (Button)v1.findViewById(R.id.key_right);
+                mNumbers[1] = (Button) v1.findViewById(R.id.key_left);
+                mNumbers[2] = (Button) v1.findViewById(R.id.key_middle);
+                mNumbers[3] = (Button) v1.findViewById(R.id.key_right);
 
-                mNumbers[4] = (Button)v2.findViewById(R.id.key_left);
-                mNumbers[5] = (Button)v2.findViewById(R.id.key_middle);
-                mNumbers[6] = (Button)v2.findViewById(R.id.key_right);
+                mNumbers[4] = (Button) v2.findViewById(R.id.key_left);
+                mNumbers[5] = (Button) v2.findViewById(R.id.key_middle);
+                mNumbers[6] = (Button) v2.findViewById(R.id.key_right);
 
-                mNumbers[7] = (Button)v3.findViewById(R.id.key_left);
-                mNumbers[8] = (Button)v3.findViewById(R.id.key_middle);
-                mNumbers[9] = (Button)v3.findViewById(R.id.key_right);
+                mNumbers[7] = (Button) v3.findViewById(R.id.key_left);
+                mNumbers[8] = (Button) v3.findViewById(R.id.key_middle);
+                mNumbers[9] = (Button) v3.findViewById(R.id.key_right);
 
-                b = (Button)v4.findViewById(R.id.key_left);
+                b = (Button) v4.findViewById(R.id.key_left);
                 b.setEnabled(false);
-                b = (Button)v4.findViewById(R.id.key_right);
+                b = (Button) v4.findViewById(R.id.key_right);
                 b.setEnabled(false);
-                mNumbers[0] = (Button)v4.findViewById(R.id.key_middle);
+                mNumbers[0] = (Button) v4.findViewById(R.id.key_middle);
 
                 b = (Button) findViewById(R.id.bDone);
                 b.setOnClickListener(this);
@@ -131,10 +130,10 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
                             }
                             if (mInputPointer < mInputSize - 1) {
                                 for (int i = mInputPointer; i >= 0; i--) {
-                                    mInput[i+1] = mInput[i];
+                                    mInput[i + 1] = mInput[i];
                                 }
                                 mInputPointer++;
-                                mInput [0] = val;
+                                mInput[0] = val;
                                 updateTime();
                             }
                             return;
@@ -157,7 +156,7 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
     }
 
     protected void reset() {
-        for (int i = 0; i < mInputSize; i ++) {
+        for (int i = 0; i < mInputSize; i++) {
             mInput[i] = 0;
         }
         mInputPointer = -1;
@@ -193,7 +192,7 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
                 commitChanges(action, e.getText().toString());
                 break;
             case Constants.QUICK_ALARM:
-                commitChanges(action,Integer.toString(getTime()));
+                commitChanges(action, Integer.toString(getTime()));
                 break;
         }
     }
@@ -206,7 +205,7 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
         switch (reqCode) {
             case (PICK_NUMBER):
                 if (resultCode == this.RESULT_OK) {
-                    commitChanges(action,data.getStringExtra("number"));
+                    commitChanges(action, data.getStringExtra("number"));
                 }
                 break;
             case (PICK_CONTACT):
@@ -226,7 +225,7 @@ public class DetailsAction extends ActionBarActivity implements Button.OnClickLi
                                     null, null);
                             phones.moveToFirst();
                             String cNumber = phones.getString(phones.getColumnIndex("data1"));
-                            commitChanges(action,cNumber);
+                            commitChanges(action, cNumber);
                         }
                     }
                 }

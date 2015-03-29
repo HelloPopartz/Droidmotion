@@ -6,10 +6,10 @@ System apps have extended support and functions.
 
 ### Features
 - Material design
-- Launch apps from a HID input device.
 - Volume control
 - Media control
 - Camera control
+- Quick alarm
 - Automatic calls (Phone
 - Automatic messages (Phone)
 

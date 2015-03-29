@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.tactil.lpro.muv_config.data.CommonData;
-import com.tactil.lpro.muv_config.data.res.AppInfo;
-import com.tactil.lpro.muv_config.data.res.listView.app.AppListAdapter;
+import com.droidmotion.data.CommonData;
+import com.droidmotion.data.res.AppInfo;
+import com.droidmotion.data.res.listView.app.AppListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,11 +45,11 @@ public class FetchApps extends ActionBarActivity implements ListView.OnItemClick
 
         CommonData appState = (CommonData) getApplicationContext();
 
-        officialApps.add(new AppInfo(getString(R.string.autoCall),"system.dialer",getResources().getDrawable(R.drawable.ic_auto_call),true));
-        officialApps.add(new AppInfo(getString(R.string.camera),"system.camera",getResources().getDrawable(R.drawable.ic_camera),true));
-        officialApps.add(new AppInfo(getString(R.string.alarm),"system.alarm",getResources().getDrawable(R.drawable.ic_add_alarm),true));
-        officialApps.add(new AppInfo(getString(R.string.sms),"system.sms",getResources().getDrawable(R.drawable.ic_chat_grey),true));
-        officialApps.add(new AppInfo(getString(R.string.media),"system.media",getResources().getDrawable(R.drawable.ic_equalizer),true));
+        officialApps.add(new AppInfo(getString(R.string.autoCall), "system.dialer", getResources().getDrawable(R.drawable.ic_auto_call), true));
+        officialApps.add(new AppInfo(getString(R.string.camera), "system.camera", getResources().getDrawable(R.drawable.ic_camera), true));
+        officialApps.add(new AppInfo(getString(R.string.alarm), "system.alarm", getResources().getDrawable(R.drawable.ic_add_alarm), true));
+        officialApps.add(new AppInfo(getString(R.string.sms), "system.sms", getResources().getDrawable(R.drawable.ic_chat_grey), true));
+        officialApps.add(new AppInfo(getString(R.string.media), "system.media", getResources().getDrawable(R.drawable.ic_equalizer), true));
 
 
         List<ResolveInfo> availableActivities = manager.queryIntentActivities(i, 0);

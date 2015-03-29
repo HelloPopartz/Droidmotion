@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res;
+package com.droidmotion.data.res;
 
 /**
  * Created by Resh on 22/02/2015.

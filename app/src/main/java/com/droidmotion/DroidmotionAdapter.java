@@ -1,22 +1,18 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
-import android.app.AlarmManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.KeyboardView;
 import android.net.Uri;
 import android.os.Environment;
-import android.os.SystemClock;
 import android.provider.AlarmClock;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.KeyEvent;
 
-import com.tactil.lpro.muv_config.data.CommonData;
-import com.tactil.lpro.muv_config.data.Constants;
-import com.tactil.lpro.muv_config.data.res.ButtonInfo;
+import com.droidmotion.data.CommonData;
+import com.droidmotion.data.Constants;
+import com.droidmotion.data.res.ButtonInfo;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -25,7 +21,52 @@ import java.util.Date;
 /**
  * Created by mrdomint on 4/03/15.
  */
-public class MuvAdapter extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+public class DroidmotionAdapter extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+
+    public static final int MEDIA_TYPE_IMAGE = 1;
+    public static final int MEDIA_TYPE_VIDEO = 2;
+
+    /**
+     * Create a file Uri for saving an image or video
+     */
+    private static Uri getOutputMediaFileUri(int type) {
+        return Uri.fromFile(getOutputMediaFile(type));
+    }
+
+    /**
+     * Create a File for saving an image or video
+     */
+    private static File getOutputMediaFile(int type) {
+        // To be safe, you should check that the SDCard is mounted
+        // using Environment.getExternalStorageState() before doing this.
+
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), "DroidMotion");
+        // This location works best if you want the created images to be shared
+        // between applications and persist after your app has been uninstalled.
+
+        // Create the storage directory if it does not exist
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
+                return null;
+            }
+        }
+
+        // Create a media file name
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        File mediaFile;
+        if (type == MEDIA_TYPE_IMAGE) {
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
+                    "IMG_" + timeStamp + ".jpg");
+        } else if (type == MEDIA_TYPE_VIDEO) {
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
+                    "VID_" + timeStamp + ".mp4");
+        } else {
+            return null;
+        }
+
+        return mediaFile;
+    }
 
     @Override
     public void onPress(int primaryCode) {
@@ -65,9 +106,9 @@ public class MuvAdapter extends InputMethodService implements KeyboardView.OnKey
                 startActivity(i);
                 break;
             case Constants.AUTO_MESSAGE_SMS:
-                Uri u = Uri.parse("smsto:600527529");
+                Uri u = Uri.parse("smsto:100");
                 Intent it = new Intent(Intent.ACTION_SENDTO, u);
-                it.putExtra("sms_body",actionData);
+                it.putExtra("sms_body", actionData);
                 it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(it);
                 break;
@@ -193,46 +234,5 @@ public class MuvAdapter extends InputMethodService implements KeyboardView.OnKey
     @Override
     public void swipeUp() {
 
-    }
-
-    public static final int MEDIA_TYPE_IMAGE = 1;
-    public static final int MEDIA_TYPE_VIDEO = 2;
-
-    /** Create a file Uri for saving an image or video */
-    private static Uri getOutputMediaFileUri(int type){
-        return Uri.fromFile(getOutputMediaFile(type));
-    }
-
-    /** Create a File for saving an image or video */
-    private static File getOutputMediaFile(int type){
-        // To be safe, you should check that the SDCard is mounted
-        // using Environment.getExternalStorageState() before doing this.
-
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), "DroidMotion");
-        // This location works best if you want the created images to be shared
-        // between applications and persist after your app has been uninstalled.
-
-        // Create the storage directory if it does not exist
-        if (!mediaStorageDir.exists()){
-            if (!mediaStorageDir.mkdirs()){
-                return null;
-            }
-        }
-
-        // Create a media file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        File mediaFile;
-        if (type == MEDIA_TYPE_IMAGE){
-            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
-                    "IMG_"+ timeStamp + ".jpg");
-        } else if(type == MEDIA_TYPE_VIDEO) {
-            mediaFile = new File(mediaStorageDir.getPath() + File.separator +
-                    "VID_"+ timeStamp + ".mp4");
-        } else {
-            return null;
-        }
-
-        return mediaFile;
     }
 }

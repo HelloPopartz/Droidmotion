@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res.listView.app;
+package com.droidmotion.data.res.listView.app;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,8 +8,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.tactil.lpro.muv_config.R;
-import com.tactil.lpro.muv_config.data.res.AppInfo;
+import com.droidmotion.R;
+import com.droidmotion.data.res.AppInfo;
 
 import java.util.ArrayList;
 

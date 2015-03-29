@@ -1,6 +1,4 @@
-package com.tactil.lpro.muv_config.data.res;
-
-import com.tactil.lpro.muv_config.data.Constants;
+package com.droidmotion.data.res;
 
 import java.io.Serializable;
 

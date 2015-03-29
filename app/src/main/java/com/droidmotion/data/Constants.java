@@ -1,9 +1,9 @@
-package com.tactil.lpro.muv_config.data;
+package com.droidmotion.data;
 
 import android.content.Context;
 import android.content.res.Resources;
 
-import com.tactil.lpro.muv_config.R;
+import com.droidmotion.R;
 
 /**
  * Created by mrdomint on 28/02/15.

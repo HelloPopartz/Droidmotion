@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.widget.TextView;
  */
 public class PhoneNumber extends ActionBarActivity implements Button.OnClickListener {
 
-    protected final Button mNumbers [] = new Button [10];
+    protected final Button mNumbers[] = new Button[10];
     protected ImageButton mDelete;
     protected long mDialVal;
     protected int digits;
@@ -30,39 +30,39 @@ public class PhoneNumber extends ActionBarActivity implements Button.OnClickList
         View v3 = findViewById(R.id.third);
         View v4 = findViewById(R.id.fourth);
 
-        mDelete = (ImageButton)findViewById(R.id.delete);
+        mDelete = (ImageButton) findViewById(R.id.delete);
         mDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mDialVal /= 10;
-                digits = digits == 0 ? 0 : digits-1;
+                digits = digits == 0 ? 0 : digits - 1;
                 updateTime();
             }
         });
 
-        mDial = (TextView)findViewById(R.id.dial);
+        mDial = (TextView) findViewById(R.id.dial);
 
         reset();
 
-        mNumbers[1] = (Button)v1.findViewById(R.id.key_left);
-        mNumbers[2] = (Button)v1.findViewById(R.id.key_middle);
-        mNumbers[3] = (Button)v1.findViewById(R.id.key_right);
+        mNumbers[1] = (Button) v1.findViewById(R.id.key_left);
+        mNumbers[2] = (Button) v1.findViewById(R.id.key_middle);
+        mNumbers[3] = (Button) v1.findViewById(R.id.key_right);
 
-        mNumbers[4] = (Button)v2.findViewById(R.id.key_left);
-        mNumbers[5] = (Button)v2.findViewById(R.id.key_middle);
-        mNumbers[6] = (Button)v2.findViewById(R.id.key_right);
+        mNumbers[4] = (Button) v2.findViewById(R.id.key_left);
+        mNumbers[5] = (Button) v2.findViewById(R.id.key_middle);
+        mNumbers[6] = (Button) v2.findViewById(R.id.key_right);
 
-        mNumbers[7] = (Button)v3.findViewById(R.id.key_left);
-        mNumbers[8] = (Button)v3.findViewById(R.id.key_middle);
-        mNumbers[9] = (Button)v3.findViewById(R.id.key_right);
+        mNumbers[7] = (Button) v3.findViewById(R.id.key_left);
+        mNumbers[8] = (Button) v3.findViewById(R.id.key_middle);
+        mNumbers[9] = (Button) v3.findViewById(R.id.key_right);
 
         Button b;
 
-        b = (Button)v4.findViewById(R.id.key_left);
+        b = (Button) v4.findViewById(R.id.key_left);
         b.setEnabled(false);
-        b = (Button)v4.findViewById(R.id.key_right);
+        b = (Button) v4.findViewById(R.id.key_right);
         b.setEnabled(false);
-        mNumbers[0] = (Button)v4.findViewById(R.id.key_middle);
+        mNumbers[0] = (Button) v4.findViewById(R.id.key_middle);
 
         b = (Button) findViewById(R.id.bDone);
         b.setOnClickListener(this);
@@ -77,7 +77,7 @@ public class PhoneNumber extends ActionBarActivity implements Button.OnClickList
                     if ((mDialVal == 0 && val == 0) || digits == 11)
                         return;
                     else {
-                        mDialVal = mDialVal*10 + val;
+                        mDialVal = mDialVal * 10 + val;
                         digits++;
                         updateTime();
                     }
@@ -95,7 +95,7 @@ public class PhoneNumber extends ActionBarActivity implements Button.OnClickList
     }
 
     protected void updateTime() {
-        mDial.setText(String.format("%d",mDialVal));
+        mDial.setText(String.format("%d", mDialVal));
     }
 
     protected void reset() {
@@ -106,8 +106,8 @@ public class PhoneNumber extends ActionBarActivity implements Button.OnClickList
 
     @Override
     public void onClick(View v) {
-        Intent i = new Intent().putExtra("number",String.format("%d",mDialVal));
-        setResult(RESULT_OK,i);
+        Intent i = new Intent().putExtra("number", String.format("%d", mDialVal));
+        setResult(RESULT_OK, i);
         finish();
     }
 }

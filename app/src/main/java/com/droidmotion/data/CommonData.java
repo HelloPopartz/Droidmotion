@@ -1,10 +1,10 @@
-package com.tactil.lpro.muv_config.data;
+package com.droidmotion.data;
 
 import android.app.Application;
 import android.content.Context;
 import android.view.KeyEvent;
 
-import com.tactil.lpro.muv_config.data.res.ButtonInfo;
+import com.droidmotion.data.res.ButtonInfo;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -87,12 +87,12 @@ public class CommonData extends Application {
 
     private void addSupportedApps() {
         this.availableActions = new HashMap<String, ArrayList<Short>>();
-        this.availableActions.put("com.whatsapp", new ArrayList<Short>(Arrays.asList(Constants.OPEN_APP,Constants.AUTO_MESSAGE)));
-        this.availableActions.put("org.telegram.messenger", new ArrayList<Short>(Arrays.asList(Constants.OPEN_APP,Constants.AUTO_MESSAGE)));
+        this.availableActions.put("com.whatsapp", new ArrayList<Short>(Arrays.asList(Constants.OPEN_APP, Constants.AUTO_MESSAGE)));
+        this.availableActions.put("org.telegram.messenger", new ArrayList<Short>(Arrays.asList(Constants.OPEN_APP, Constants.AUTO_MESSAGE)));
         this.availableActions.put("system.dialer", new ArrayList<Short>(Arrays.asList(Constants.AUTO_CALL)));
         this.availableActions.put("system.sms", new ArrayList<Short>(Arrays.asList(Constants.AUTO_MESSAGE_SMS)));
         this.availableActions.put("system.alarm", new ArrayList<Short>(Arrays.asList(Constants.QUICK_ALARM)));
-        this.availableActions.put("system.camera", new ArrayList<Short>(Arrays.asList(Constants.AUTO_PHOTO, Constants.AUTO_PHOTO_SELF,Constants.AUTO_VIDEO)));
+        this.availableActions.put("system.camera", new ArrayList<Short>(Arrays.asList(Constants.AUTO_PHOTO, Constants.AUTO_PHOTO_SELF, Constants.AUTO_VIDEO)));
         this.availableActions.put("system.media", new ArrayList<Short>(Arrays.asList(Constants.PAUSE_PLAY_MEDIA, Constants.FORWARD_MEDIA, Constants.BACKWARD_MEDIA, Constants.VOLUME_UP, Constants.VOLUME_DOWN, Constants.MUTE)));
 
     }

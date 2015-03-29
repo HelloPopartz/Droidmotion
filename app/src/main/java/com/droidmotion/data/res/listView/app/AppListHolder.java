@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res.listView.app;
+package com.droidmotion.data.res.listView.app;
 
 import android.widget.ImageView;
 import android.widget.TextView;

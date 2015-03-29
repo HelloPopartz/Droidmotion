@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

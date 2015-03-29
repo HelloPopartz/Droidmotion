@@ -1,7 +1,6 @@
-package com.tactil.lpro.muv_config;
+package com.droidmotion;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
@@ -10,9 +9,9 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.tactil.lpro.muv_config.data.CommonData;
-import com.tactil.lpro.muv_config.data.res.ButtonInfo;
-import com.tactil.lpro.muv_config.data.res.listView.button.ButtonListAdapter;
+import com.droidmotion.data.CommonData;
+import com.droidmotion.data.res.ButtonInfo;
+import com.droidmotion.data.res.listView.button.ButtonListAdapter;
 
 import java.util.ArrayList;
 

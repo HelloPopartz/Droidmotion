@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res;
+package com.droidmotion.data.res;
 
 import android.graphics.drawable.Drawable;
 

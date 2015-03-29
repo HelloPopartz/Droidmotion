@@ -14,26 +14,24 @@
  * limitations under the License
  */
 
-package com.tactil.lpro.muv_config.data.res.view;
+package com.droidmotion.data.res.view;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tactil.lpro.muv_config.R;
+import com.droidmotion.R;
 
 
 public class TimerView extends LinearLayout {
 
+    private final int mWhiteColor, mGrayColor;
     private TextView mHoursOnes, mMinutesOnes;
     private TextView mHoursTens, mMinutesTens;
     private TextView mSeconds;
-    private final int mWhiteColor, mGrayColor;
     private float mGapPadding;
 
     @SuppressWarnings("unused")
@@ -70,6 +68,7 @@ public class TimerView extends LinearLayout {
 
     /**
      * Measure the text and add a start padding to the view
+     *
      * @param textView view to measure and on to which add start padding
      */
     private void addStartPadding(TextView textView) {

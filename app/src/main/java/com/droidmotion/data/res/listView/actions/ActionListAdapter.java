@@ -1,15 +1,14 @@
-package com.tactil.lpro.muv_config.data.res.listView.actions;
+package com.droidmotion.data.res.listView.actions;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.tactil.lpro.muv_config.R;
-import com.tactil.lpro.muv_config.data.Constants;
+import com.droidmotion.R;
+import com.droidmotion.data.Constants;
 
 import java.util.ArrayList;
 
@@ -45,7 +44,7 @@ public class ActionListAdapter extends ArrayAdapter<Short> {
             item.setTag(holder);
         }
         holder = (ActionListHolder) item.getTag();
-        holder.actionName.setText(Constants.translateAction(data.get(i),mContext));
+        holder.actionName.setText(Constants.translateAction(data.get(i), mContext));
 
         return item;
     }

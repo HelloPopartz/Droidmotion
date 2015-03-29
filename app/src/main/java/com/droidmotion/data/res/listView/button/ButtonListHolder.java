@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res.listView.button;
+package com.droidmotion.data.res.listView.button;
 
 import android.widget.TextView;
 

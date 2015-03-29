@@ -1,4 +1,4 @@
-package com.tactil.lpro.muv_config.data.res.listView.button;
+package com.droidmotion.data.res.listView.button;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.tactil.lpro.muv_config.R;
-import com.tactil.lpro.muv_config.data.Constants;
-import com.tactil.lpro.muv_config.data.res.ButtonInfo;
+import com.droidmotion.R;
+import com.droidmotion.data.Constants;
+import com.droidmotion.data.res.ButtonInfo;
 
 import java.util.ArrayList;
 
@@ -51,7 +51,7 @@ public class ButtonListAdapter extends ArrayAdapter<ButtonInfo> {
         holder.buttonName.setText("Boton " + data.get(i).getName());
         String s = data.get(i).getApp();
         holder.launcher.setText(s == null ? mContext.getString(R.string.dNoAction) : s);
-        holder.action.setText(Constants.translateAction(data.get(i).getAction(),mContext));
+        holder.action.setText(Constants.translateAction(data.get(i).getAction(), mContext));
 
         return item;
     }
