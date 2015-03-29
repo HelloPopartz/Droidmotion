@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="medium_font_padding">12dp</dimen>
+    <dimen name="timer_setup_delete_start_margin">19sp</dimen>
+    <dimen name="timer_setup_delete_padding">12dip</dimen>
+</resources>

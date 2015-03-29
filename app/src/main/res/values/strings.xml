@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res-auto">
+
+    <!-- Generic -->
+    <string name="dDone">Done</string>
+
+    <!-- Activity titles -->
+    <string name="app_name">Droidmotion</string>
+    <string name="appSelect">Select an app</string>
+    <string name="actionSelect">Select an action</string>
+    <string name="autoCallSelect">Automatic call</string>
+    <string name="alarmSelect">Quick alarm</string>
+    <string name="numberSelect">Input a phone number</string>
+
+    <!-- Configuration menu-->
+    <string name="dConf">Linked actions</string>
+
+    <!-- Apps -->
+    <string name="dAppSection">Available apps</string>
+    <string name="autoCall">Dialer</string>
+    <string name="camera">Camera</string>
+    <string name="alarm">Alarm</string>
+    <string name="sms">SMS message</string>
+    <string name="media">Media control</string>
+    <string name="nav">System navigation</string>
+    <string name="official">Official support</string>
+
+    <!-- Action -->
+    <string name="dActionSection">Available actions</string>
+    <string name="dNoAction">Unassigned</string>
+    <string name="dOpenApp">Open app</string>
+    <string name="dAutoMessage">Automatic message</string>
+    <string name="dAutoSelfie">Automatic frontal photo</string>
+    <string name="dAutoPhoto">Automatic photo</string>
+    <string name="dAutoVideo">Automatic video</string>
+    <string name="dAutoCall">Automatic call</string>
+    <string name="dAutoAlarm">Automatic alarm</string>
+    <string name="dPausePlay">Pause/play media</string>
+    <string name="dForward">Next media file</string>
+    <string name="dBackward">Previous media file</string>
+    <string name="dVolumeUp">Volume up</string>
+    <string name="dVolumeDown">Volume down</string>
+    <string name="dMute">Mute</string>
+
+    <!-- Action details-->
+    <string name="dNumber">Add number</string>
+    <string name="dContacts">Add contact</string>
+
+    <!-- Action data -->
+
+    <string name="dPhoneSection">Options</string>
+
+    <!-- Content descriptors -->
+    <string name="timer_delete">Delete</string>
+
+    <!-- Timer view -->
+
+    <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
+    <string name="hours_label">h</string>
+    <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
+    <string name="minutes_label">m</string>
+    <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
+    <string name="seconds_label">s</string>
+    <!-- Accessibility strings -->
+    <string name="hours_label_description">hours</string>
+    <string name="minutes_label_description">minutes</string>
+    <string name="seconds_label_description">seconds</string>
+
+</resources>

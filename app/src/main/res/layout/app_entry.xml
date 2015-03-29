@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/dAppIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/dAppName"
+        style="@style/listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dAppIcon"
+        android:paddingLeft="16dp"
+        android:paddingTop="20dp"
+        android:text="New Text" />
+
+    <TextView
+        android:id="@+id/dPackageName"
+        style="@style/listSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dAppName"
+        android:layout_toRightOf="@+id/dAppIcon"
+        android:paddingBottom="20dip"
+        android:paddingLeft="16dp"
+        android:text="New Text" />
+
+    <TextView
+        android:id="@+id/dOfficial"
+        style="@style/listAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/dAppName"
+        android:paddingTop="20dp"
+        android:text="" />
+</RelativeLayout>

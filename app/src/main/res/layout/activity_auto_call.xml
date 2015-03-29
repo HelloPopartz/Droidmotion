@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dPhoneSection"
+        style="@style/sectionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dip"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:text="@string/dPhoneSection" />
+
+    <RelativeLayout
+        android:id="@+id/dNumberSection"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/dPhoneSection"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/dNumberIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_action_plus" />
+
+        <TextView
+            android:id="@+id/dNumber"
+            style="@style/listTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/dNumberIcon"
+            android:text="@string/dNumber" />
+
+        <Button
+            android:id="@+id/bNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="?android:attr/selectableItemBackground" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/dNumberSection"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:id="@+id/dContactsSection"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/divider"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/dContactsIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_account_circle" />
+
+        <TextView
+            android:id="@+id/dContacts"
+            style="@style/listTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/dContactsIcon"
+            android:text="@string/dContacts" />
+
+        <Button
+            android:id="@+id/bContacts"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="?android:attr/selectableItemBackground" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/dContactsSection"
+        android:background="@color/grey" />
+
+    <!--<ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lPhone"
+        android:layout_below="@+id/dPhoneSection"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="8dip"
+        android:layout_gravity="center" />!-->
+
+
+</RelativeLayout>

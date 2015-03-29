@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/timer_time_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/medium_font_padding"
+        android:paddingTop="@dimen/medium_font_padding">
+
+        <TextView
+            android:id="@+id/dial"
+            style="@style/dial_setup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textColor="@color/green" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/timer_delete"
+            android:padding="@dimen/timer_setup_delete_padding"
+            android:background="@drawable/ic_backspace_green"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="8dip"
+        android:background="@color/grey" />
+
+    <include
+        android:id="@+id/first"
+        layout="@layout/three_keys_view" />
+
+    <include
+        android:id="@+id/second"
+        layout="@layout/three_keys_view" />
+
+    <include
+        android:id="@+id/third"
+        layout="@layout/three_keys_view" />
+
+    <include
+        android:id="@+id/fourth"
+        layout="@layout/three_keys_view" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_marginBottom="8dip"
+        android:background="@color/grey" />
+
+    <Button
+        android:id="@+id/bDone"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="16dip"
+        android:layout_marginRight="16dip"
+        android:maxHeight="36dp"
+        android:text="@string/dDone"
+        android:textColor="@color/green" />
+
+
+</LinearLayout>
