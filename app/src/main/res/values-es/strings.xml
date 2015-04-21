@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Generic -->
+    <string name="dDone">Hecho</string>
+
+    <!-- Activity titles -->
+    <string name="appSelect">Aplicaciones</string>
+    <string name="actionSelect">Acciones</string>
+    <string name="autoCallSelect">Llamada automatica</string>
+    <string name="alarmSelect">Alarma rápida</string>
+    <string name="numberSelect">Introduzca un telefono</string>
+
+    <!-- Configuration menu-->
+    <string name="dConf">Acciones asociadas</string>
+
+    <!-- Apps -->
+    <string name="dAppSection">Aplicaciones disponibles</string>
+    <string name="autoCall">Teléfono</string>
+    <string name="camera">Camara</string>
+    <string name="alarm">Alarma</string>
+    <string name="sms">Mensaje SMS</string>
+    <string name="media">Control de música</string>
+    <string name="nav">Navegación del sistema</string>
+    <string name="official">Soporte oficial</string>
+
+    <!-- Action -->
+    <string name="dActionSection">Acciones disponibles</string>
+    <string name="dNoAction">Sin asignar</string>
+    <string name="dOpenApp">Abrir aplicación</string>
+    <string name="dAutoMessage">Mensaje automático</string>
+    <string name="dAutoSelfie">Fotografía frontal automática</string>
+    <string name="dAutoPhoto">Fotografía automática</string>
+    <string name="dAutoVideo">Grabación de video</string>
+    <string name="dAutoCall">Llamada automática</string>
+    <string name="dAutoAlarm">Alarma automática</string>
+    <string name="dPausePlay">Pausar/Reproducir música</string>
+    <string name="dForward">Reproducir siguiente pista</string>
+    <string name="dBackward">Retroceder anterior pista</string>
+    <string name="dVolumeUp">Subir volumen</string>
+    <string name="dVolumeDown">Bajar volumen</string>
+    <string name="dMute">Silenciar</string>
+
+    <!-- Action details-->
+    <string name="dNumber">Añadir un número</string>
+    <string name="dContacts">Añadir un contacto</string>
+
+    <!-- Action data -->
+
+    <string name="dPhoneSection">Opciones</string>
+
+    <!-- Content descriptors -->
+    <string name="timer_delete">Eliminar</string>
+
+    <!-- Timer view -->
+
+    <!-- Abbreviation for temporal hours [CHAR LIMIT=1] -->
+    <string name="hours_label">h</string>
+    <!-- Abbreviation for temporal minutes [CHAR LIMIT=1] -->
+    <string name="minutes_label">m</string>
+    <!-- Abbreviation for temporal seconds [CHAR LIMIT=1] -->
+    <string name="seconds_label">s</string>
+    <!-- Accessibility strings -->
+    <string name="hours_label_description">hours</string>
+    <string name="minutes_label_description">minutes</string>
+    <string name="seconds_label_description">seconds</string>
+
+</resources>

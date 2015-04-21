@@ -1,7 +1,7 @@
-## Droidmotion
+## HID Launcher
 
-Droidmotion is a remote app launcher for Android. 
-Droidmotion detects HID signals (Numpad 1-5) and launch the apps or functions defined by the user.
+HID Launcher is a remote app launcher for Android. 
+HID Launcher detects HID signals (Numpad 1-5) and launch the apps or functions defined by the user.
 System apps have extended support and functions.
 
 ### Features
